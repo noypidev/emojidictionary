@@ -9,17 +9,23 @@
 import UIKit
 
 class LargeEmojiViewController: UIViewController {
-
+    
+    var emoji = ""
+    
+    @IBOutlet weak var largeEmojiLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        largeEmojiLabel.text = emoji
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*
