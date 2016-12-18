@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var emojiTableView: UITableView!
     
-    var emojis = ["😀", "😁", "🤡", "🤑", "🤥", "💩", "😇"]
+    var emojis : [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         emojiTableView.dataSource = self
         emojiTableView.delegate = self
+        
+        generateEmojis()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = emojis[indexPath.row]._symbol
         return cell
     }
     
@@ -39,15 +41,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let largeEmojiVC = segue.destination as! LargeEmojiViewController
-        largeEmojiVC.emoji = sender as! String
+        largeEmojiVC.emoji = sender as! Emoji
+    }
+    
+    func generateEmojis() {
+        emojis.append(Emoji(symbol: "😀", name: "Smiley", description: "Smiling Emoji", categ: Emoji.category.emoticons))
+        
+        emojis.append(Emoji(symbol: "🤡", name: "Clowney", description: "Creepy Clown Emoji", categ: Emoji.category.emoticons))
+        
+        emojis.append(Emoji(symbol: "🤑", name: "Ka-ching-ey", description: "$$$ Emoji", categ: Emoji.category.emoticons))
+        
+        emojis.append(Emoji(symbol: "🐨", name: "Koal-ey", description: "Koala Emoticon", categ: Emoji.category.animals))
+        
+        emojis.append(Emoji(symbol: "🐒", name: "Monkey", description: "Side-view Monkey Emoji", categ: Emoji.category.animals))
+        
+        emojis.append(Emoji(symbol: "🏥", name: "Hospital-ey", description: "Hospital Building Emoji", categ: Emoji.category.buildings))
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 
 }
 

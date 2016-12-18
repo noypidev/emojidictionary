@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QHX-J8-fZw">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-Se-x6N">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -53,17 +53,35 @@
                         <viewControllerLayoutGuide type="bottom" id="XOy-Oc-39m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bSU-I5-JrT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⛪️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAJ-4e-Kat">
-                                <rect key="frame" x="68.5" y="104" width="239" height="263"/>
+                                <rect key="frame" x="87.666666666666686" y="104" width="239" height="263"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="220"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample (church) emoji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-lD-R1c">
-                                <rect key="frame" x="69.5" y="427" width="236" height="21"/>
+                                <rect key="frame" x="89" y="427" width="236" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dn-WO-XhM">
+                                <rect key="frame" x="160.66666666666666" y="390" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsF-rl-j1V">
+                                <rect key="frame" x="169.66666666666666" y="484" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buildings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI0-F8-uGy">
+                                <rect key="frame" x="172" y="528" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,19 +89,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VsF-rl-j1V" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="08O-rv-wP7"/>
+                            <constraint firstItem="bI0-F8-uGy" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="Aty-8R-lAz"/>
+                            <constraint firstItem="VsF-rl-j1V" firstAttribute="top" secondItem="yBV-lD-R1c" secondAttribute="bottom" constant="36" id="Ljg-qY-2Ec"/>
                             <constraint firstItem="JAJ-4e-Kat" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="Rv0-0b-gub"/>
+                            <constraint firstItem="2dn-WO-XhM" firstAttribute="top" secondItem="JAJ-4e-Kat" secondAttribute="bottom" constant="23" id="Szt-aR-C8Y"/>
+                            <constraint firstItem="bI0-F8-uGy" firstAttribute="top" secondItem="VsF-rl-j1V" secondAttribute="bottom" constant="23" id="a90-FL-ewM"/>
                             <constraint firstItem="yBV-lD-R1c" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="e6M-YT-rEw"/>
-                            <constraint firstItem="yBV-lD-R1c" firstAttribute="top" secondItem="JAJ-4e-Kat" secondAttribute="bottom" constant="60" id="lPV-j8-m2O"/>
+                            <constraint firstItem="2dn-WO-XhM" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="gnG-6O-4vx"/>
+                            <constraint firstItem="VsF-rl-j1V" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="lSi-Jd-gc4"/>
+                            <constraint firstItem="yBV-lD-R1c" firstAttribute="top" secondItem="2dn-WO-XhM" secondAttribute="bottom" constant="16" id="p37-it-Dtb"/>
+                            <constraint firstItem="yBV-lD-R1c" firstAttribute="centerX" secondItem="bSU-I5-JrT" secondAttribute="centerX" id="ua2-CH-60L"/>
                             <constraint firstItem="JAJ-4e-Kat" firstAttribute="top" secondItem="hRJ-Ql-Blk" secondAttribute="bottom" constant="40" id="uyw-FI-9mF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emojiCategoryLabel" destination="bI0-F8-uGy" id="0St-wl-51N"/>
+                        <outlet property="emojiDescriptionLabel" destination="yBV-lD-R1c" id="ZG9-uO-ukb"/>
                         <outlet property="largeEmojiLabel" destination="JAJ-4e-Kat" id="rCV-vX-nvw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bz6-QC-9ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680.8" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1680.5" y="33.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fYh-hY-RC8">

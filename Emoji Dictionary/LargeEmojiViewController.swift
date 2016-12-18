@@ -10,14 +10,18 @@ import UIKit
 
 class LargeEmojiViewController: UIViewController {
     
-    var emoji = ""
+    var emoji : Emoji = Emoji()
     
     @IBOutlet weak var largeEmojiLabel: UILabel!
+    @IBOutlet weak var emojiDescriptionLabel: UILabel!
+    @IBOutlet weak var emojiCategoryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        largeEmojiLabel.text = emoji
+        largeEmojiLabel.text = emoji._symbol
+        emojiDescriptionLabel.text = emoji._description
+        emojiCategoryLabel.text = emoji._categoryEnum.rawValue
     }
 
     override func didReceiveMemoryWarning() {
